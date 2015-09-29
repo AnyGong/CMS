@@ -205,6 +205,7 @@ th, td {
 }
 
 .lr-article {
+  text-align: center;
   padding: 10px 0;
   font-size: 16px;
 }
@@ -579,6 +580,7 @@ th, td {
   z-index: 5000;
   left: 20px;
   top: 80px;
+  width: 227px;
   text-align: center;
 }
 
@@ -624,6 +626,130 @@ th, td {
 }
 
 /*右侧浮动模块*/
+.float-module {
+  position: fixed;
+  z-index: 5000;
+  top: 0;
+  right: -300px;
+  height: 100%;
+  width: 360px;
+  background-color: #040841;
+}
+
+.float-module .user-info-icon {
+  background-image: url("info.png");
+}
+
+.float-module .user-huanbi-icon {
+  background-image: url("huanbi.png");
+}
+
+.float-module .user-attendance-icon {
+  background-image: url("attendance.png");
+}
+
+.float-module .user-order-icon {
+  background-image: url("order.png");
+}
+
+.float-module .user-pay-icon {
+  background-image: url("pay.png");
+}
+
+.float-module .user-search-icon {
+  background-image: url("search.png");
+}
+
+.float-module .module-status {
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  z-index: 2;
+  display: block;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 74px;
+}
+
+.float-module .module-status.active {
+  background-color: #e66c0e;
+}
+
+.float-module .show-active {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 74px;
+  background-color: #e66c0e;
+}
+
+.float-module .show-active.active {
+  display: block;
+}
+
+.float-module .module-icon {
+  position: relative;
+  display: block;
+  height: 74px;
+  width: 206px;
+}
+
+.float-module .hover-status {
+  position: absolute;
+  cursor: pointer;
+  z-index: 2;
+  display: none;
+  top: 0;
+  *border: 1px solid #EAEAEA;
+  *height: 73px;
+  right: 120px;
+  width: 146px;
+  height: 74px;
+  line-height: 74px;
+  text-align: center;
+  font-size: 21px;
+  background-color: #fafafa;
+  color: #606060;
+  box-shadow: 0 0 12px 2px #999;
+}
+
+.float-module .hover-status .arrow-triangle {
+  position: absolute;
+  right: -8px;
+  top: 50%;
+  margin-top: -8px;
+}
+
+.float-module .hover-status .arrow-triangle {
+  height: 0;
+  width: 0;
+  border-bottom: 7px solid transparent;
+  border-left: 8px solid #fafafa;
+  border-top: 7px solid transparent;
+}
+
+.float-module .float-module-list {
+  position: relative;
+  float: left;
+  background-color: #181d62;
+  width: 60px;
+  height: 100%;
+}
+
+.float-module .float-module-list_bd {
+  position: absolute;
+  right: 0;
+  top: 80px;
+}
+
+.float-module .enable-title {
+  display: none;
+}
+
 /*登录*/
 .login {
   display: none;
@@ -743,141 +869,6 @@ th, td {
   display: none;
 }
 
-.float-module {
-  position: fixed;
-  z-index: 5000;
-  top: 0;
-  right: -300px;
-  height: 100%;
-  width: 360px;
-  background-color: #040841;
-}
-
-.float-module .user-info {
-  position: relative;
-  display: block;
-  cursor: pointer;
-  background-image: url("info.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: #181d62;
-  width: 60px;
-  height: 74px;
-}
-
-.float-module .user-huanbi {
-  position: relative;
-  display: block;
-  cursor: pointer;
-  background-image: url("huanbi.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: #181d62;
-  width: 60px;
-  height: 74px;
-}
-
-.float-module .user-attendance {
-  position: relative;
-  display: block;
-  cursor: pointer;
-  background-image: url("attendance.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: #181d62;
-  width: 60px;
-  height: 74px;
-}
-
-.float-module .user-order {
-  position: relative;
-  display: block;
-  cursor: pointer;
-  background-image: url("order.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: #181d62;
-  width: 60px;
-  height: 74px;
-}
-
-.float-module .user-pay {
-  position: relative;
-  display: block;
-  cursor: pointer;
-  background-image: url("pay.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: #181d62;
-  width: 60px;
-  height: 74px;
-}
-
-.float-module .user-search {
-  position: relative;
-  display: block;
-  cursor: pointer;
-  background-image: url("search.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: #181d62;
-  width: 60px;
-  height: 74px;
-}
-
-.float-module .module-status:hover {
-  background-color: #e66c0e;
-}
-
-.float-module .float-module-list {
-  position: relative;
-  float: left;
-  background-color: #181d62;
-  width: 60px;
-  height: 100%;
-}
-
-.float-module .float-module-list_bd {
-  position: relative;
-  top: 80px;
-}
-
-.float-module .enable-title {
-  display: none;
-}
-
-.float-module .hover-status {
-  position: absolute;
-  display: none;
-  top: 0;
-  *border: 1px solid #EAEAEA;
-  *height: 73px;
-  right: 120px;
-  width: 146px;
-  height: 74px;
-  line-height: 74px;
-  text-align: center;
-  font-size: 21px;
-  background-color: #fafafa;
-  color: #606060;
-  box-shadow: 0 0 12px 2px #999;
-}
-
-.float-module .hover-status .arrow-triangle {
-  position: absolute;
-  right: -8px;
-  top: 50%;
-  margin-top: -8px;
-}
-
-.float-module .hover-status .arrow-triangle {
-  height: 0;
-  width: 0;
-  border-bottom: 7px solid transparent;
-  border-left: 8px solid #fafafa;
-  border-top: 7px solid transparent;
-}
-
 /*已登录*/
 .login-enable .disable-title {
   display: none;
@@ -914,6 +905,25 @@ th, td {
   *height: 550px;
 }
 
+.float-module-container .module-content {
+  display: none;
+}
+
+.float-module-container {
+  position: relative;
+}
+
+.float-module-container .toggle-module {
+  position: absolute;
+  z-index: 2;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+}
+
 .float-content {
   font-size: 16px;
   color: #e66c0e;
@@ -929,13 +939,6 @@ th, td {
   position: relative;
   font-size: 18px;
   color: #fff;
-}
-
-.float-content .header .toggle-module {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  cursor: pointer;
 }
 
 .float-content .float-content-bd {

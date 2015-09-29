@@ -3,35 +3,43 @@
  */
 (function () {
     'use strict';
-    var $hoverStatus = $('.module-status');
+    var $iconToggle = $('.module-icon');
     var $login = $('#J_Login');
     var $floatModule = $('#J_FloatModule');
     var $toggleModule = $('#J_ToggleModule');
     $toggleModule.on('click', function () {
-        hidefloatModule();
-    });
-    function hidefloatModule() {
+        $iconToggle.find('.show-active.active').removeClass('active');
         $floatModule.animate({right: '-300px'}, 300);
-    }
-
-    $hoverStatus.on({
-        mouseover: function () {
-            $(this).find('.hover-status').show().animate({right: '60px',opacity:'1'}, 300);
+    });
+    $iconToggle.on({
+        mouseenter:function(){
+            $(this).addClass('active').parent().find('.hover-status').show().animate({right: '60px',opacity:'1'}, 300);
+        }
+    },'.module-status').on({
+        mouseleave: function () {
+            $(this).find('.module-status').removeClass('active');
+            $(this).find('.hover-status').animate({right: '120px',opacity:'0'}, 300,function(){
+                $(this).hide();
+            });
         },
-        mouseout: function () {
-            $(this).find('.hover-status').animate({right: '120px',opacity:'0'}, 300).show();
-        },
-        click: function () {
-            var className = $(this).data('module');
-            $(this).find('.hover-status').animate({right: '120px'}, 300).hide();
+        click:function(){
             if ($floatModule.hasClass('login-enable')) {
-                $floatModule.animate({right: '0'}, 300);
+                $floatModule.find('.show-active.active').removeClass('active');
+                $(this).trigger('mouseleave').find('.show-active').addClass('active');
+                $('#J_FloatContainer').find('.module-content').hide();
+                $($(this).data('content')).show();
+                if(($(window).width()-$floatModule.offset().left)<=60){
+                    $floatModule.animate({right: '0'}, 300);
+                }
+                else{
+                    //if()
+                    //$toggleModule.trigger('click');
+                }
             }
             else if (!$login.hasClass(className)) {
                 $(this).find('.hover-status').hide().animate({right: '120px'}, 300);
                 $login.removeClass('user-info-login user-huanbi-login user-attendance-login user-order-login user-pay-login user-search-login').addClass($(this).data('module')).show();
             }
-
         }
     });
 })();

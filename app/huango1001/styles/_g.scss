@@ -100,6 +100,7 @@ $large-wrap: 100%;
 }
 
 .lr-article {
+  text-align: center;
   padding: 10px 0;
   font-size: 16px;
   .hint-mark {
@@ -428,6 +429,7 @@ $large-wrap: 100%;
   z-index: 5000;
   left: 20px;
   top: 80px;
+  width: 227px;
   .header {
     display: block;
     padding-bottom: 4px;
@@ -488,6 +490,96 @@ $floatIconClassName: (
                 (pay, (40px 42px)),
                 (search, (34px 35px))
 );
+.float-module {
+  position: fixed;
+  z-index: 5000;
+  top: 0;
+  right: -($floatModuleContainer);
+  height: 100%;
+  width: 360px;
+  background-color: #040841;
+  @each $className, $position in $floatIconClassName {
+    $imgName: $className;
+    .user-#{$imgName}-icon {
+      background-image: url('#{$imgName}.png');
+    }
+  }
+  .module-status {
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    z-index: 2;
+    display: block;
+    background: {
+      position: center;
+      repeat: no-repeat;
+    }
+    @include size($moduleIconWidth, 74px);
+    &.active {
+      background-color: #e66c0e;
+    }
+  }
+  .show-active{
+    display: none;
+    position: absolute;
+    top:0;
+    right: 0;
+    @include size($moduleIconWidth, 74px);
+    background-color: #e66c0e;
+    &.active{
+      display: block;
+    }
+  }
+  .module-icon {
+    position: relative;
+    display: block;
+    height: $moduleIconHeight;
+    width: ($moduleIconWidth)+($moduleHoverWidth);
+  }
+  .hover-status {
+    position: absolute;
+    cursor: pointer;
+    z-index: 2;
+    display: none;
+    top: 0;
+    *border: 1px solid #EAEAEA;;
+    *height: ($moduleIconHeight)-1px;
+    right: $hoverStatusGap;
+    width: $moduleHoverWidth;
+    height: $moduleIconHeight;
+    line-height: $moduleIconHeight;
+    text-align: center;
+    font-size: 21px;
+    .arrow-triangle {
+      position: absolute;
+      right: -($arrowTriangleHeight);
+      top: 50%;
+      margin-top: -8px;
+    }
+    background-color: $disableHoverColor;
+    color: #606060;
+    box-shadow: 0 0 12px 2px #999;
+    .arrow-triangle {
+      @include triangle($arrowTriangleWidth #{$arrowTriangleHeight}, $disableHoverColor, right);
+    }
+  }
+  .float-module-list {
+    position: relative;
+    float: left;
+    background-color: #181d62;
+    width: $moduleIconWidth;
+    height: 100%;
+  }
+  .float-module-list_bd {
+    position: absolute;
+    right: 0;
+    top: 80px;
+  }
+  .enable-title {
+    display: none;
+  }
+}
 
 /*登录*/
 .login {
@@ -582,75 +674,6 @@ $floatIconClassName: (
   }
 }
 
-.float-module {
-  position: fixed;
-  z-index: 5000;
-  top: 0;
-  right: -($floatModuleContainer);
-  height: 100%;
-  width: 360px;
-  background-color: #040841;
-  @each $className, $position in $floatIconClassName {
-    $imgName: $className;
-    .user-#{$imgName} {
-      position: relative;
-      display: block;
-      cursor: pointer;
-      background: {
-        image: url('#{$imgName}.png');
-        position: center;
-        repeat: no-repeat;
-        color: #181d62;
-      }
-      @include size($moduleIconWidth, 74px);
-    }
-  }
-  .module-status {
-    &:hover {
-      background-color: #e66c0e;
-    }
-  }
-  .float-module-list {
-    position: relative;
-    float: left;
-    background-color: #181d62;
-    width: $moduleIconWidth;
-    height: 100%;
-  }
-  .float-module-list_bd {
-    position: relative;
-    top: 80px;
-  }
-  .enable-title {
-    display: none;
-  }
-  .hover-status {
-    position: absolute;
-    display: none;
-    top: 0;
-    *border: 1px solid #EAEAEA;;
-    *height: ($moduleIconHeight)-1px;
-    right: $hoverStatusGap;
-    width: $moduleHoverWidth;
-    height: $moduleIconHeight;
-    line-height: $moduleIconHeight;
-    text-align: center;
-    font-size: 21px;
-    .arrow-triangle {
-      position: absolute;
-      right: -($arrowTriangleHeight);
-      top: 50%;
-      margin-top: -8px;
-    }
-    background-color: $disableHoverColor;
-    color: #606060;
-    box-shadow: 0 0 12px 2px #999;
-    .arrow-triangle {
-      @include triangle($arrowTriangleWidth #{$arrowTriangleHeight}, $disableHoverColor, right);
-    }
-  }
-}
-
 /*已登录*/
 .login-enable {
   .disable-title {
@@ -679,8 +702,23 @@ $floatIconClassName: (
     max-height: 550px;
     *height: 550px;
   }
+  .module-content{
+    display: none;
+  }
 }
-
+.float-module-container{
+  position: relative;
+  .toggle-module {
+    position: absolute;
+    z-index: 2;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+    color:#fff;
+    font-weight: bold;
+    font-size: 18px;
+  }
+}
 .float-content {
   font-size: 16px;
   color: #e66c0e;
@@ -694,12 +732,6 @@ $floatIconClassName: (
     position: relative;
     font-size: 18px;
     color: #fff;
-    .toggle-module {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      cursor: pointer;
-    }
   }
   .float-content-bd {
     padding: 10px;
