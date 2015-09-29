@@ -1,0 +1,301 @@
+@charset "utf-8";
+@import "normalize";
+
+/* ==========================================================================
+   user custom css 用户自定义css
+   ========================================================================== */
+body {
+
+}
+
+@mixin inline-block($align: null) {
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+  vertical-align: $align;
+}
+
+.space-middle {
+  @include inline-block(middle);
+  width: 1px;
+  font-size: 0;
+  height: 100%;
+  margin-left: -20px;
+}
+
+/* wrap setting 全局架构设定
+   ========================================================================== */
+.g-wrap {
+  color: #fff;
+  width: 100%;
+  min-width: 1024px;
+  text-align: center;
+  .g-wrap-content {
+    @include inline-block(middle);
+  }
+}
+
+.g-slide {
+  text-align: right;
+  float: left;
+  .slide-mark {
+    text-align: right;
+    padding-left: 150px;
+    padding-top: 40px;
+  }
+  .slide-mark-bd {
+    @include inline-block;
+    text-align: left;
+    .point-title {
+      font-size: 18px;
+    }
+  }
+  .slide-logo {
+    text-align: left;
+  }
+  .slide-mark-pic {
+    text-align: right;
+    padding-right: 60px;
+  }
+}
+
+.g-main {
+  overflow: hidden;
+  *zoom: 1;
+  //padding-left: 30px;
+
+}
+
+/* typography base 排版，基本base使用
+   ========================================================================== */
+/**
+ * 文章排版 .ui-article
+ */
+.ui-article {
+  line-height: 1.5em;
+}
+
+/* components 组件/模块
+   ========================================================================== */
+.fix {
+  overflow: hidden;
+  *zoo: 1;
+}
+
+.hint {
+  position: absolute;
+  text-align: left;
+  .hint-title {
+    font-size: 28px;
+    font-weight: bold;
+    padding-bottom: 20px;
+  }
+  .hint {
+    line-height: 4em;
+    text-align: left;
+  }
+  .hint-title-mark {
+    font-size: 16px;
+    .hint-txt {
+      font-size: 20px;
+    }
+  }
+}
+
+.cloud-hint {
+  width: 385px;
+  height: 212px;
+  .cloud-hint-bd {
+    text-align: left;
+    color: #1EAEB2;
+    font-size: 18px;
+    padding-top: 20px;
+    padding-left: 32px;
+    padding-right: 15px;
+  }
+}
+
+.link-down{
+  position: absolute;
+  a{
+    display: block;
+    width: 130px;
+    height: 36px;
+    &.iphone{
+      margin-top: 16px;
+    }
+  }
+}
+
+.page-mark {
+  position: absolute;
+  text-align: left;
+  bottom: 0;
+}
+
+.person-container {
+  background: {
+    image: url('bgPage2.png');
+    repeat: no-repeat;
+    position: center;
+  }
+  .g-wrap-content {
+    min-width: 996px;
+    width: 100%;
+    height: 100%;
+    background: {
+      repeat: no-repeat;
+      position: center top;
+    }
+  ;
+  }
+  .g-wrap-container {
+    position: relative;
+    width: 996px;
+    margin: 0 auto;
+  }
+}
+
+.have-container{
+  background: {
+    image: url('bgPage1.png');
+    repeat: no-repeat;
+    position: center;
+  }
+  .g-wrap-content {
+    position: relative;
+    width: 953px;
+    height: 519px;
+    padding-left: 10px;
+    background: {
+      repeat: no-repeat;
+      position: center top;
+    }
+  ;
+  }
+  .hint-txt{
+    color: #EBE947;
+  }
+
+}
+
+/* pages 页面
+   ========================================================================== */
+
+/*体验三次*/
+.first-page{
+  .g-wrap-content {
+    background-image: url("firstPage.png");
+  }
+  .page-mark{
+    left: 160px;
+    bottom: 6px;
+  }
+  .hint{
+    top:150px;
+    right: 136px;
+  }
+  .link-down{
+    bottom: 20px;
+    right: 4px;
+  }
+}
+
+/*正在加速*/
+.second-page{
+  .g-wrap-content {
+    background-image: url("secondPage.png");
+  }
+  .page-mark{
+    left: 160px;
+    bottom: 6px;
+  }
+  .hint{
+    top:150px;
+    right: 196px;
+  }
+  .link-down{
+    bottom: 20px;
+    right: 4px;
+  }
+}
+
+/*不需要使用*/
+.fourth-page {
+  .g-wrap-container {
+    height: 700px;
+  }
+  .g-wrap-content {
+    background-image: url("fourthPage.png");
+  }
+  .page-mark {
+    left: 148px;
+  }
+  .cloud-hint {
+    position: absolute;
+    top: 182px;
+    right: 84px;
+  }
+  .link-down{
+    bottom: 6px;
+    right: 196px;
+  }
+}
+
+/*不支持加速*/
+.fifth-page {
+  .g-wrap-container {
+    height: 680px;
+  }
+  .g-wrap-content {
+    background-image: url("fifthPage.png");
+  }
+  .cloud-hint {
+    position: absolute;
+    top: 265px;
+    right: 52px;
+  }
+  .page-mark {
+    left: 148px;
+  }
+  .link-down{
+    bottom: 8px;
+    right: 194px;
+  }
+}
+
+/*恭喜你加速成功*/
+.third-page {
+  .hint {
+    top: 196px;
+    right: 110px;
+    .hint-txt {
+      color: #E95014;
+    }
+    .hint-title-mark {
+      color: #1DAEB2;
+    }
+  }
+  .g-wrap-container {
+    height: 600px;
+  }
+  .page-mark {
+    left: 212px;
+  }
+  .g-wrap-content {
+    background-image: url("thirdPage.png");
+  }
+  .cloud-hint {
+    position: absolute;
+    top: 265px;
+    right: 52px;
+  }
+  .link-down{
+    bottom: 8px;
+    right: 162px;
+  }
+}
+
+
+

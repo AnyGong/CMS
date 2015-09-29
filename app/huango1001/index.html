@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <title></title>
+    <link rel="stylesheet" href="styles/g.css"/>
+</head>
+<body>
+<!--排行榜-->
+<div class="ranking">
+    <img class="header" src="styles/ranking.png"/>
+    <table class="ranking-table">
+        <thead>
+        <tr>
+            <th>排名</th>
+            <th>手机号</th>
+            <th>欢币数</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="active">
+            <td>1.</td>
+            <td>177XXXXX514</td>
+            <td>1000000</td>
+        </tr>
+        <tr class="active">
+            <td>2.</td>
+            <td>177XXXXX514</td>
+            <td>1000000</td>
+        </tr>
+        <tr class="active">
+            <td>3.</td>
+            <td>177XXXXX514</td>
+            <td>1000000</td>
+        </tr>
+        <tr>
+            <td>4.</td>
+            <td>177XXXXX514</td>
+            <td>1000000</td>
+        </tr>
+        <tr>
+            <td>5.</td>
+            <td>177XXXXX514</td>
+            <td>1000000</td>
+        </tr>
+        <tr>
+            <td>6.</td>
+            <td>177XXXXX514</td>
+            <td>1000000</td>
+        </tr>
+        <tr>
+            <td>7.</td>
+            <td>177XXXXX514</td>
+            <td>1000000</td>
+        </tr>
+        <tr>
+            <td>8.</td>
+            <td>177XXXXX514</td>
+            <td>1000000</td>
+        </tr>
+        <tr>
+            <td>9.</td>
+            <td>177XXXXX514</td>
+            <td>1000000</td>
+        </tr>
+        <tr>
+            <td>10.</td>
+            <td>177XXXXX514</td>
+            <td>1000000</td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="update-ranking">
+        <a href="" class="up-btn">&ensp;更新排名</a>
+    </div>
+</div>
+<!--浮动主体模块-->
+<div id="J_FloatModule" class="float-module login-enable">
+    <div class="float-module-list">
+        <div class="float-module-list_bd">
+            <!--我的信息_icon-->
+            <a data-module="user-info-login"  class="user-info module-status">
+                <div class="hover-status">
+                    <span class="disable-title">登录</span>
+                    <span class="enable-title">个人信息</span>
+                    <i class="arrow-triangle"></i>
+                </div>
+            </a>
+            <!--我的欢币_icon-->
+            <a data-module="user-huanbi-login" class="user-huanbi module-status">
+                <div class="hover-status">
+                    <span class="disable-title">欢go币</span>
+                    <span class="enable-title">我的欢币</span>
+                    <i class="arrow-triangle"></i>
+                </div>
+            </a>
+            <!--我的签到_icon-->
+            <a data-module="user-attendance-login" class="user-attendance module-status">
+                <div class="hover-status">
+                    <span class="disable-title">签&emsp;到</span>
+                    <span class="enable-title">我的签到</span>
+                    <i class="arrow-triangle"></i>
+                </div>
+            </a>
+            <!--我的订单_icon-->
+            <a data-module="user-order-login" class="user-order module-status">
+                <div class="hover-status">
+                    <span class="disable-title">订&emsp;单</span>
+                    <span class="enable-title">我的订单</span>
+                    <i class="arrow-triangle"></i>
+                </div>
+            </a>
+            <!--我的充值_icon-->
+            <a data-module="user-pay-login" class="user-pay module-status">
+                <div class="hover-status">
+                    <span class="disable-title">充&emsp;值</span>
+                    <span class="enable-title">我的充值</span>
+                    <i class="arrow-triangle"></i>
+                </div>
+            </a>
+            <!--我的查询_icon-->
+            <a data-module="user-search-login" class="user-search module-status">
+                <div class="hover-status">
+                    <span class="disable-title">查询</span>
+                    <span class="enable-title">我的查询</span>
+                    <i class="arrow-triangle"></i>
+                </div>
+            </a>
+            <!--登录-->
+            <div id="J_Login" data-module="" class="login login-c" >
+                <div class="login-bd">
+                    <form action="">
+                        <div class="list-block">
+                            <div class="list-content">
+                                <label class="list-label">手机号：</label>
+                                <input type="text" value="" class="list-value input"/>
+                            </div>
+                            <div class="list-content">
+                                <label class="list-label">随机密码：</label>
+                                <input type="text" class="list-value input"/>
+                            </div>
+                        </div>
+                        <div class="list-block form-submit">
+                            <a href="" class="login-btn button">登录</a>
+                            <a href="" class="obtain-random button">获取随机码</a>
+                        </div>
+                        <a href="#" class="join-btn">如何参加?</a>
+                    </form>
+                    <i class="arrow"></i>
+                </div>
+                <i class="arrow-triangle"></i>
+            </div>
+        </div>
+    </div>
+    <div class="float-module-container">
+        <!--个人信息_content-->
+        <div class="float-content user-info-content">
+            <div class="header">
+                <span id="J_ToggleModule" class="toggle-module">&#62;&#62;</span>
+                <p>个人信息</p>
+            </div>
+            <div class="j_Scroll">
+                <div class="float-content-bd">
+                    <img src="styles/user-icon.png" class="user-icon"/>
+                    <p class="user-hello">亲爱的，17721050514</p>
+                    <div class="sun-other">
+                        <div class="sun-other-bd">
+                            <span class="order-title">你的排名</span>
+                            <i class="paiming-icon"></i>
+                            <span class="order-by">第1名</span>
+                        </div>
+                    </div>
+                    <div class="sun-other">
+                        <div class="sun-other-bd">
+                            <span class="order-title">你的欢币</span>
+                            <i class="huanbi-icon"></i>
+                            <span class="order-by">第9999名</span>
+                        </div>
+                    </div>
+                    <p class="details-title">欢币明细</p>
+                    <div class="details-main">
+                        <div class="details-main-bd">
+                            <table class="table-blue">
+                                <tbody>
+                                <tr>
+                                    <td>我的签到得欢币</td>
+                                    <td class="huanbi-count">5个</td>
+                                </tr>
+                                <tr>
+                                    <td>我的订单得欢币</td>
+                                    <td class="huanbi-count">18264个</td>
+                                </tr>
+                                <tr>
+                                    <td>我的充值得欢币</td>
+                                    <td class="huanbi-count">300个</td>
+                                </tr>
+                                <tr>
+                                    <td>我的查询得欢币</td>
+                                    <td class="huanbi-count">0个</td>
+                                </tr>
+                                <tr class="huanbi-sun">
+                                    <td>总计得欢币</td>
+                                    <td class="huanbi-count">18569个</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="g-header">
+
+</div>
+<div class="g-process g-wrap">
+    <ul class="g-process-bd">
+        <li>
+            <p class="process-sequence">任务1</p>
+
+            <p class="process-title">登录获得欢币</p>
+        </li>
+        <li>
+            <p class="process-sequence">任务2</p>
+
+            <p class="process-title">签到获得欢币</p>
+        </li>
+        <li>
+            <p class="process-sequence">&ensp;任务3</p>
+
+            <p class="process-title">购物获得欢币</p>
+        </li>
+        <li>
+            <p class="process-sequence">&ensp;任务4</p>
+
+            <p class="process-title">充值获得欢币</p>
+        </li>
+        <li>
+            <p class="process-sequence">&ensp;任务5</p>
+
+            <p class="process-title">查询获得欢币</p>
+        </li>
+    </ul>
+</div>
+<!--终端入合约-->
+<div class="g-commodity  terminal g-wrap">
+    <div class="g-commodity-bd">
+        <div class="g-commodity-header">
+            <div class="g-commodity-header_line"></div>
+            <img src="styles/terminal.png" class="g-commodity-header_icon"/>
+        </div>
+        <div class="g-commodity-wrap">
+            <ul class="g-commodity-bd">
+                <li>
+                    <div class="g-shopping shop-line">
+                        <div class="g-shopping-icon">
+                            <img src="styles/phone-show.png" class="shop-show"/>
+                        </div>
+                        <div class="g-shopping-mark">
+                            <p class="g-shopping-title">iPhone6S（玫瑰金）</p>
+
+                            <p class="g-shopping-param">4.7寸 64G内存 全网通</p>
+                        </div>
+                        <div class="g-shopping-price">
+                            <div class="g-price-list blue">
+                                <div class="g-price-money">
+                                    <span class="tc-name">套餐对折价:</span>
+                                    <span class="tc-price"><i class="price-unit">&#165;</i>5288</span>
+                                </div>
+                                <p class="g-price-get">领等量&nbsp;&emsp;&nbsp;币</p>
+                            </div>
+                            <div class="g-price-list orange">
+                                <div class="g-price-money">
+                                    <span class="tc-name">总宽带价:</span>
+                                    <span class="tc-price"><i class="price-unit">&#165;</i>5288</span>
+                                </div>
+                                <p class="g-price-get">领等量&nbsp;&emsp;&nbsp;币</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="g-shopping shop-line">
+                        <div class="g-shopping-icon">
+                            <img src="styles/phone-show.png" class="shop-show"/>
+                        </div>
+                        <div class="g-shopping-mark">
+                            <p class="g-shopping-title">iPhone6S（玫瑰金）</p>
+
+                            <p class="g-shopping-param">4.7寸 64G内存 全网通</p>
+                        </div>
+                        <div class="g-shopping-price">
+                            <div class="g-price-list blue">
+                                <div class="g-price-money">
+                                    <span class="tc-name">套餐对折价:</span>
+                                    <span class="tc-price"><i class="price-unit">&#165;</i>5288</span>
+                                </div>
+                                <p class="g-price-get">领等量&nbsp;&emsp;&nbsp;币</p>
+                            </div>
+                            <div class="g-price-list orange">
+                                <div class="g-price-money">
+                                    <span class="tc-name">总宽带价:</span>
+                                    <span class="tc-price"><i class="price-unit">&#165;</i>5288</span>
+                                </div>
+                                <p class="g-price-get">领等量&nbsp;&emsp;&nbsp;币</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="g-shopping shop-line">
+                        <div class="g-shopping-icon">
+                            <img src="styles/phone-show.png" class="shop-show"/>
+                        </div>
+                        <div class="g-shopping-mark">
+                            <p class="g-shopping-title">iPhone6S（玫瑰金）</p>
+
+                            <p class="g-shopping-param">4.7寸 64G内存 全网通</p>
+                        </div>
+                        <div class="g-shopping-price">
+                            <div class="g-price-list blue">
+                                <div class="g-price-money">
+                                    <span class="tc-name">套餐对折价:</span>
+                                    <span class="tc-price"><i class="price-unit">&#165;</i>5288</span>
+                                </div>
+                                <p class="g-price-get">领等量&nbsp;&emsp;&nbsp;币</p>
+                            </div>
+                            <div class="g-price-list orange">
+                                <div class="g-price-money">
+                                    <span class="tc-name">总宽带价:</span>
+                                    <span class="tc-price"><i class="price-unit">&#165;</i>5288</span>
+                                </div>
+                                <p class="g-price-get">领等量&nbsp;&emsp;&nbsp;币</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="g-shopping">
+                        <div class="g-shopping-icon">
+                            <img src="styles/phone-show.png" class="shop-show"/>
+                        </div>
+                        <div class="g-shopping-mark">
+                            <p class="g-shopping-title">iPhone6S（玫瑰金）</p>
+
+                            <p class="g-shopping-param">4.7寸 64G内存 全网通</p>
+                        </div>
+                        <div class="g-shopping-price">
+                            <div class="g-price-list blue">
+                                <div class="g-price-money">
+                                    <span class="tc-name">套餐对折价:</span>
+                                    <span class="tc-price"><i class="price-unit">&#165;</i>5288</span>
+                                </div>
+                                <p class="g-price-get">领等量&nbsp;&emsp;&nbsp;币</p>
+                            </div>
+                            <div class="g-price-list orange">
+                                <div class="g-price-money">
+                                    <span class="tc-name">总宽带价:</span>
+                                    <span class="tc-price"><i class="price-unit">&#165;</i>5288</span>
+                                </div>
+                                <p class="g-price-get">领等量&nbsp;&emsp;&nbsp;币</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="g-shopping shop-line">
+                        <div class="g-shopping-icon">
+                            <img src="styles/phone-show.png" class="shop-show"/>
+                        </div>
+                        <div class="g-shopping-mark">
+                            <p class="g-shopping-title">iPhone6S（玫瑰金）</p>
+
+                            <p class="g-shopping-param">4.7寸 64G内存 全网通</p>
+                        </div>
+                        <div class="g-shopping-price">
+                            <div class="g-price-list blue">
+                                <div class="g-price-money">
+                                    <span class="tc-name">套餐对折价:</span>
+                                    <span class="tc-price"><i class="price-unit">&#165;</i>5288</span>
+                                </div>
+                                <p class="g-price-get">领等量&nbsp;&emsp;&nbsp;币</p>
+                            </div>
+                            <div class="g-price-list orange">
+                                <div class="g-price-money">
+                                    <span class="tc-name">总宽带价:</span>
+                                    <span class="tc-price"><i class="price-unit">&#165;</i>5288</span>
+                                </div>
+                                <p class="g-price-get">领等量&nbsp;&emsp;&nbsp;币</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="g-shopping shop-line">
+                        <div class="g-shopping-icon">
+                            <img src="styles/phone-show.png" class="shop-show"/>
+                        </div>
+                        <div class="g-shopping-mark">
+                            <p class="g-shopping-title">iPhone6S（玫瑰金）</p>
+
+                            <p class="g-shopping-param">4.7寸 64G内存 全网通</p>
+                        </div>
+                        <div class="g-shopping-price">
+                            <div class="g-price-list blue">
+                                <div class="g-price-money">
+                                    <span class="tc-name">套餐对折价:</span>
+                                    <span class="tc-price"><i class="price-unit">&#165;</i>5288</span>
+                                </div>
+                                <p class="g-price-get">领等量&nbsp;&emsp;&nbsp;币</p>
+                            </div>
+                            <div class="g-price-list orange">
+                                <div class="g-price-money">
+                                    <span class="tc-name">总宽带价:</span>
+                                    <span class="tc-price"><i class="price-unit">&#165;</i>5288</span>
+                                </div>
+                                <p class="g-price-get">领等量&nbsp;&emsp;&nbsp;币</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="g-shopping shop-line">
+                        <div class="g-shopping-icon">
+                            <img src="styles/phone-show.png" class="shop-show"/>
+                        </div>
+                        <div class="g-shopping-mark">
+                            <p class="g-shopping-title">iPhone6S（玫瑰金）</p>
+
+                            <p class="g-shopping-param">4.7寸 64G内存 全网通</p>
+                        </div>
+                        <div class="g-shopping-price">
+                            <div class="g-price-list blue">
+                                <div class="g-price-money">
+                                    <span class="tc-name">套餐对折价:</span>
+                                    <span class="tc-price"><i class="price-unit">&#165;</i>5288</span>
+                                </div>
+                                <p class="g-price-get">领等量&nbsp;&emsp;&nbsp;币</p>
+                            </div>
+                            <div class="g-price-list orange">
+                                <div class="g-price-money">
+                                    <span class="tc-name">总宽带价:</span>
+                                    <span class="tc-price"><i class="price-unit">&#165;</i>5288</span>
+                                </div>
+                                <p class="g-price-get">领等量&nbsp;&emsp;&nbsp;币</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="g-shopping">
+                        <div class="g-shopping-icon">
+                            <img src="styles/phone-show.png" class="shop-show"/>
+                        </div>
+                        <div class="g-shopping-mark">
+                            <p class="g-shopping-title">iPhone6S（玫瑰金）</p>
+
+                            <p class="g-shopping-param">4.7寸 64G内存 全网通</p>
+                        </div>
+                        <div class="g-shopping-price">
+                            <div class="g-price-list blue">
+                                <div class="g-price-money">
+                                    <span class="tc-name">套餐对折价:</span>
+                                    <span class="tc-price"><i class="price-unit">&#165;</i>5288</span>
+                                </div>
+                                <p class="g-price-get">领等量&nbsp;&emsp;&nbsp;币</p>
+                            </div>
+                            <div class="g-price-list orange">
+                                <div class="g-price-money">
+                                    <span class="tc-name">总宽带价:</span>
+                                    <span class="tc-price"><i class="price-unit">&#165;</i>5288</span>
+                                </div>
+                                <p class="g-price-get">领等量&nbsp;&emsp;&nbsp;币</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--套餐大流量-->
+<div class="g-commodity  packages g-wrap">
+    <div class="g-commodity-bd">
+        <div class="g-commodity-header">
+            <div class="g-commodity-header_line"></div>
+            <img src="styles/wlan-title.png" class="g-commodity-header_icon"/>
+        </div>
+        <div class="g-commodity-wrap">
+            <ul class="g-commodity-bd">
+                <li>
+                    <div class="g-shopping shop-line">
+                        <div class="g-shop-card orange">
+                            <div class="card-tag">
+                                <span class="space-middle"></span>
+
+                                <div class="card-tag-mark">
+                                    <p>月租</p>
+
+                                    <p>对折</p>
+                                </div>
+                            </div>
+                            <div class="card-tag-mark">
+                                <p class="card-tag-title">乐享4G</p>
+
+                                <p class="card-tag-price">99</p>
+
+                                <p class="card-tag-tc">+1元 套餐</p>
+                            </div>
+                        </div>
+                        <div class="g-shopping-price">
+                            <div class="g-price-list card-name">
+                                <p>倍享卡99+1</p>
+                            </div>
+                            <div class="g-price-list price blue">
+                                <div class="g-price-money">
+                                    <span class="tc-name">售价:</span>
+                                    <span class="tc-price"><i class="price-unit">&#165;</i>100</span>
+                                </div>
+                                <p class="g-price-get">领等量&nbsp;&emsp;&nbsp;币</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="g-shopping shop-line">
+                        <div class="g-shop-card orange">
+                            <div class="card-tag">
+                                <span class="space-middle"></span>
+
+                                <div class="card-tag-mark">
+                                    <p>月租</p>
+
+                                    <p>对折</p>
+                                </div>
+                            </div>
+                            <div class="card-tag-mark">
+                                <p class="card-tag-title">乐享4G</p>
+
+                                <p class="card-tag-price">199</p>
+
+                                <p class="card-tag-tc">+1元 套餐</p>
+                            </div>
+                        </div>
+                        <div class="g-shopping-price">
+                            <div class="g-price-list card-name">
+                                <p>倍享卡199+1</p>
+                            </div>
+                            <div class="g-price-list price blue">
+                                <div class="g-price-money">
+                                    <span class="tc-name">售价:</span>
+                                    <span class="tc-price"><i class="price-unit">&#165;</i>200</span>
+                                </div>
+                                <p class="g-price-get">领等量&nbsp;&emsp;&nbsp;币</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="g-shopping">
+                        <div class="g-shop-card orange">
+                            <div class="card-tag">
+                                <span class="space-middle"></span>
+
+                                <div class="card-tag-mark">
+                                    <p>资费</p>
+
+                                    <p>低</p>
+                                </div>
+                            </div>
+                            <div class="card-tag-mark">
+                                <p class="card-tag-title">飞Young</p>
+
+                                <p class="card-tag-price">19</p>
+
+                                <p class="card-tag-tc">+5元 套餐</p>
+                            </div>
+                        </div>
+                        <div class="g-shopping-price">
+                            <div class="g-price-list card-name">
+                                <p>飞young19+5（聊天版）</p>
+                            </div>
+                            <div class="g-price-list price blue">
+                                <div class="g-price-money">
+                                    <span class="tc-name">售价:</span>
+                                    <span class="tc-price"><i class="price-unit">&#165;</i>50</span>
+                                </div>
+                                <p class="g-price-get">领等量&nbsp;&emsp;&nbsp;币</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--无线上网卡-->
+<div class="g-commodity  wifi g-wrap">
+    <div class="g-commodity-bd">
+        <div class="g-commodity-header">
+            <div class="g-commodity-header_line"></div>
+            <img src="styles/wlan-title.png" class="g-commodity-header_icon"/>
+        </div>
+        <div class="g-commodity-wrap">
+            <ul class="g-commodity-bd">
+                <li>
+                    <div class="g-shopping shop-line">
+                        <div class="g-shop-card green">
+                            <img src="styles/wlan-card.png" class="g-shop-card_icon"/>
+
+                            <div class="g-shop-card_param">
+                                <p>本地4G无线宽带</p>
+
+                                <p>上网卡<span class="day-sun">100</span>天卡套餐</p>
+                            </div>
+                        </div>
+                        <div class="g-shopping-price">
+                            <div class="g-price-list blue">
+                                <div class="g-price-money">
+                                    <span class="tc-name">售价:</span>
+                                    <span class="tc-price"><i class="price-unit">&#165;</i>100</span>
+                                </div>
+                                <p class="g-price-get">领等量&nbsp;&emsp;&nbsp;币</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="g-shopping shop-line">
+                        <div class="g-shop-card green">
+                            <img src="styles/wlan-card.png" class="g-shop-card_icon"/>
+
+                            <div class="g-shop-card_param">
+                                <p>本地4G无线宽带</p>
+
+                                <p>上网卡<span class="day-sun">200</span>天卡套餐</p>
+                            </div>
+                        </div>
+                        <div class="g-shopping-price">
+                            <div class="g-price-list blue">
+                                <div class="g-price-money">
+                                    <span class="tc-name">售价:</span>
+                                    <span class="tc-price"><i class="price-unit">&#165;</i>200</span>
+                                </div>
+                                <p class="g-price-get">领等量&nbsp;&emsp;&nbsp;币</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="g-shopping shop-line">
+                        <div class="g-shop-card green">
+                            <img src="styles/wlan-card.png" class="g-shop-card_icon"/>
+
+                            <div class="g-shop-card_param">
+                                <p>本地4G无线宽带</p>
+
+                                <p>上网卡<span class="day-sun">300</span>天卡套餐</p>
+                            </div>
+                        </div>
+                        <div class="g-shopping-price">
+                            <div class="g-price-list blue">
+                                <div class="g-price-money">
+                                    <span class="tc-name">售价:</span>
+                                    <span class="tc-price"><i class="price-unit">&#165;</i>300</span>
+                                </div>
+                                <p class="g-price-get">领等量&nbsp;&emsp;&nbsp;币</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="g-shopping">
+                        <div class="g-shop-card green">
+                            <img src="styles/wlan-card.png" class="g-shop-card_icon"/>
+
+                            <div class="g-shop-card_param">
+                                <p>本地4G无线宽带</p>
+
+                                <p>上网卡<span class="day-sun">400</span>天卡套餐</p>
+                            </div>
+                        </div>
+                        <div class="g-shopping-price">
+                            <div class="g-price-list blue">
+                                <div class="g-price-money">
+                                    <span class="tc-name">售价:</span>
+                                    <span class="tc-price"><i class="price-unit">&#165;</i>400</span>
+                                </div>
+                                <p class="g-price-get">领等量&nbsp;&emsp;&nbsp;币</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--活动说明-->
+<div class="g-article g-wrap">
+    <p class="g-article-title">完成任务，获得欢币：</p>
+
+    <div class="ui-article">
+        <p>1. 点击右侧功能栏，使用您的电信手机号参加活动。如您没有电信手机号，请点击“如何参加”领取连卡并激活后参加活动。</p>
+
+        <p>2.“登录得欢币”：每日登录活动，在右侧“签到”栏目中可获得欢币。</p>
+
+        <p>3.“购买得欢币”：购买本活动页面内的终端、单套餐、上网卡等指定商品，均可获得您支付金额的等量欢币。在右侧“购买”栏目中验证入网人机</p>
+
+        <p>主姓名和身份证号码，即可获得对应的欢币。注意：如您的订单未支付，则不能获得；若您提出退货要求，则会扣减对应的欢币。</p>
+
+        <p>4.“充值得欢币”：在活动期间，您对参加活动的手机号进行充值，均可获得对应金额的欢币，封顶3000欢币。</p>
+
+        <p>5.“查询得欢币”：凡在活动期间，使用活动手机号通过网厅的“自助服务-查询服务-套餐使用情况查询”进行查询，即可获得50欢币。</p>
+    </div>
+</div>
+
+<script src="styles/jquery-1.11.2.min.js"></script>
+<script src="styles/jquery.mousewheel.js"></script>
+<script src="styles/perfect-scrollbar.js"></script>
+<script src="styles/g.js" charset="utf-8"></script>
+</body>
+</html>
